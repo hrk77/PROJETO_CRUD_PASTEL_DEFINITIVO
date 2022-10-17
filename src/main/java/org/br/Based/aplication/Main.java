@@ -18,12 +18,12 @@ public class Main {
         pastel.setPreco(24);
         //CHAMANDO A PARA REALIZAR A EXECUÇÃO DA CONEXAO COM O BANCO E REALIZAR A INSERÇÃO
         pastelDAO.save(pastel);
-
+//==================================================================================================
         //VISUALIZAÇÃO DE DADOS
         for (Pastel p : pastelDAO.getPastels()){
             System.out.println("Pastel: " + p.getNome());
         }
-
+//==================================================================================================
         //ATUALIZANDO OS DADOS
         //Criando o obj p1
         Pastel p1 = new Pastel();
@@ -36,8 +36,9 @@ public class Main {
         //chamando a dao q faz a conexao com o bd e com metodo ".update" que foi criado
         // para realizar essa operação de atualizar os dados
         pastelDAO.update(p1);
-
-        //Deletar pelo ID
+//===============================================================================================
+        //DELETANDO DADOS (pelo id)
+        //chamando obj + funçao e setando a posiçao q qr q seja deletado
         pastelDAO.deleteById(4);
 
     }
