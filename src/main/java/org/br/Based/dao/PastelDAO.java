@@ -55,6 +55,7 @@ public class PastelDAO {
             pstm.setInt(3,pastel.getId());
 
             pstm.execute();
+            System.out.println("Atualizado com sucesso!");
         }catch (Exception e){
             e.printStackTrace();
         }finally {
@@ -136,7 +137,7 @@ public class PastelDAO {
             pstm.setInt(1, id);
 
             pstm.execute();
-
+            System.out.println("Deletado com sucesso!");
         }catch (Exception e){
             e.printStackTrace();
         }finally {
